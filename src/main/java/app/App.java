@@ -7,6 +7,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import dao.EventoDAO;
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 
 public class App {
 	public static void main(String[] args) {
@@ -19,14 +22,14 @@ public class App {
 				Evento.TipoEvento.PUBBLICO, 100);
 
 		eventoDAO.save(evento1);
-		System.out.println(evento1.getTitolo());
+		log.info(evento1.getTitolo());
 
 		evento1 = eventoDAO.getById(evento1.getId());
 		System.out.println(evento1.getId());
 
 		evento1.setTitolo("Nuovo nomeeeee");
 		eventoDAO.refresh(evento1);
-		System.out.println(evento1.getTitolo());
+		log.info(evento1.getTitolo());
 
 		// eventoDAO.delete(evento1);
 

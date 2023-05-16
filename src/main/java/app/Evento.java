@@ -18,6 +18,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Table(name = "eventi")
+
 public class Evento {
 	@Id
 	@GeneratedValue
@@ -34,14 +35,6 @@ public class Evento {
 		PUBBLICO, PRIVATO
 	}
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setTitolo(String titolo) {
-		this.titolo = titolo;
-	}
-
 	public Evento() {
 	}
 
@@ -52,10 +45,6 @@ public class Evento {
 		this.descrizione = descrizione;
 		this.tipoEvento = tipoEvento;
 		this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
-	}
-
-	public String getTitolo() {
-		return titolo;
 	}
 
 }
