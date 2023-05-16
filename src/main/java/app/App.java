@@ -25,7 +25,7 @@ public class App {
 		log.info(evento1.getTitolo());
 
 		evento1 = eventoDAO.getById(evento1.getId());
-		System.out.println(evento1.getId());
+		System.out.println("titolo: " + evento1.getTitolo() + " id: " + evento1.getId());
 
 		evento1.setTitolo("Nuovo nomeeeee");
 		eventoDAO.refresh(evento1);
