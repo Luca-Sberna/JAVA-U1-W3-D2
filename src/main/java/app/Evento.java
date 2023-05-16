@@ -1,6 +1,7 @@
 package app;
 
 import java.util.Date;
+import java.util.UUID;
 
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -23,7 +24,7 @@ public class Evento {
 	@Id
 	@GeneratedValue
 
-	private Long id;
+	private UUID id;
 	private String titolo;
 	private Date dataEvento;
 	private String descrizione;

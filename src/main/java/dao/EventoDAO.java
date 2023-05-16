@@ -1,5 +1,7 @@
 package dao;
 
+import java.util.UUID;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 
@@ -20,9 +22,9 @@ public class EventoDAO {
 		entityManager.close();
 	}
 
-	public Evento getById(Long id) {
+	public Evento getById(UUID uuid) {
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
-		Evento evento = entityManager.find(Evento.class, id);
+		Evento evento = entityManager.find(Evento.class, uuid);
 		entityManager.close();
 		return evento;
 	}
